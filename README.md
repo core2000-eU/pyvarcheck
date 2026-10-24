@@ -19,12 +19,12 @@ Everything's neatly documented in there.
 
 - Whenever a check succeeds, every function of *pyvarcheck* returns True. When parameter [convert] is set True, it converts the input item properly and returns it.  
 - Whenever a check fails, every function of *pyvarcheck* raises Exception type `pyvarcheck.varcheck_exc`.  
-- On the occasion that there's a programmatic error in any *pyvarcheck* function (sorry, my bad), *pyvarcheck* raises the original exception to the caller. Feel free report such occasions.  
+- On the occasion that there's a programmatic error in any *pyvarcheck* function (sorry, my bad), *pyvarcheck* raises the original exception to the caller. Feel free to report such occasions.  
 
 ## Basics
 **Compatibility**  in short: any platform on Python 3.10+.  OS-independent.  
 **Status:** *public beta*. Should work without issues, waiting for community response before releasing final v1.  
-**Built** on W11 25H2 with python 3.14.2, pip 26.2.1, build 1.5.0, twine 7.0.0. Standard settings.
+**Built** on W11 25H2 with python 3.15.0, pip 26.2.2, build 1.6.1, twine 7.0.0. Standard settings.
 
 ## Build from source
 The library is built witout any special options - as per the pypi manual. It uses `setuptools` (`setup.py`) and not the toml file.  
