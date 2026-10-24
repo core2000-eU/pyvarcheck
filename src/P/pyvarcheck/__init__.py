@@ -146,4 +146,4 @@ class helpers:
             line_number = tb.tb_lineno
             absolute_path = pathlib.Path(tb.tb_frame.f_code.co_filename).resolve()
             addl_file_info=f" at file {absolute_path}, line {line_number}"
-            raise type(exc)(f"{exc_prepend}lib pyvarcheck: function {funcname}() raised internal Exception {exc} {addl_file_info}{exc_append}") from exc #raise the same orig. exception type with prepended message
+            raise type(exc)(f"{exc_prepend}lib pyvarcheck: function {funcname}() raised internal Exception {type(exc).__qualname__}('{exc}') {addl_file_info}{exc_append}") from exc #raise the same orig. exception type with prepended message
