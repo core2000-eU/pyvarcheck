@@ -13,7 +13,7 @@ long_description = (parent_dir / "README.md").read_text(encoding="utf-8")
 
 setuptools.setup (
     name =                      "pyvarcheck", 
-    version =                   '0.0.1',
+    version =                   '0.0.2',
     author =                    "Benjamin Winter",
     license=                    "MIT",
     description =               "Easy, high-level var testing for python with auto-conversion features",
