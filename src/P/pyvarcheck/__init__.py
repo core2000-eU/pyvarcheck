@@ -10,6 +10,7 @@ import inspect
 import uuid
 import ipaddress
 import re
+import pathlib
 
 #global vars
 precomp_regex_1 = re.compile(r"^[a-zA-Z0-9_.]+$") #used often
@@ -26,6 +27,7 @@ def str_utf8(obj_in,convert=False,exc_prepend="",exc_append=""):
     try:
         try:                    _=obj_in.encode("utf-8", errors="strict")
         except Exception as e:  raise pyvarcheck_exc(f"{exc_prepend}cannot encode in UTF-8. *.encode('utf-8', errors='strict') failed with exception {e.__repr__()}{exc_append}")
+        raise Exception("SomeExc")
         if(convert):            return str(obj_in)
         return True
     except Exception as e: helpers.raise_exc_properly(e,inspect.currentframe().f_code.co_name,exc_prepend,exc_append)
